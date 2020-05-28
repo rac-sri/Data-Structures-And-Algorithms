@@ -1,0 +1,42 @@
+Linking Linked List
+
+
+Implement the following scenario.
+
+There is a singly linked list (LL1) having 2∗n nodes (n≥1).
+
+Create two linked lists (LL2 and LL3) each having n–1 nodes. LL2 and LL3 are respectively formed by adding values of consecutive odd-positioned and even-positioned nodes in LL1.
+
+Note: Position of first node in LL1 is one.
+
+For example, if n=3, then LL1:1−−>2−−>3−−>4−−>5−−>6−−>NIL
+LL2:4−−>8−−>NIL
+LL3:6−−>10−−>NIL
+Now combine LL1 with LL2 and LL3. Nodes of LL2 are to be placed at alternative positions in the first-half of LL1 and nodes of LL3 are to be placed at alternative positions in the last-half of LL1. Create a new node MID that contains sum of first and last node values of LL1 and place it in the middle of the UpdatedLL1.
+
+Note: Creation of new node is not allowed here except for MID, only reposition the existing nodes.
+
+In continuation with the above example, we have
+
+MID:7−−>NIL
+UpdatedLL1:1−−>4−−>2−−>8−−>3−−>7−−>4−−>6−−>5−−>10−−>6−−>NIL
+LL2:NIL
+LL3:NIL
+Input:
+Line 1 contains an integer N. The total number of nodes in LL1 is 2∗N.
+Line 2 contains 2∗N integers separated by space. These are the node contents of LL1 starting from head position.
+Output:
+Line 1 has N−1 space separated integers, the contents of LL2 starting from head position.
+Line 2 has N−1 space separated integers, the contents of LL3 starting from head position.
+Line 3 has an integer giving the value of MID.
+Line 4 has space separated contents of UpdatedLL1 starting from head position.
+Line 5 has an integer giving total number of nodes created throughout the execution.
+Sample Input:
+4
+3 6 1 2 4 5 7 9
+Sample Output:
+4 5 11
+8 7 14
+12
+3 4 6 5 1 11 2 12 4 8 5 7 7 14 9
+15
