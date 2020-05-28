@@ -1,6 +1,8 @@
+import java.io.*;
+import java.util.*;
 import java.util.Scanner;
 
-public class RedixSort {
+class RedixSort {
 
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
@@ -10,6 +12,7 @@ public class RedixSort {
       arr[i] = sc.nextInt();
     }
     redixSort(arr, n);
+    for (int i = 0; i < n; i++) System.out.print(arr[i] + " ");
   }
 
   static void redixSort(int arr[], int n) {
@@ -21,29 +24,26 @@ public class RedixSort {
 
   static void CountSort(int arr[], int n, int pos) {
     int Count[] = new int[10];
-    int b[] = new int[n];
+    int output[] = new int[n];
+    Arrays.fill(Count, 0);
     for (int i = 0; i < n; i++) {
-      ++Count[9 - (arr[i] / pos) % 10];
+      ++Count[(arr[i] / pos) % 10];
     }
     for (int i = 1; i < 10; i++) {
       Count[i] = Count[i] + Count[i - 1];
     }
 
     for (int i = n - 1; i >= 0; i--) {
-      b[--Count[9 - (arr[i] / pos) % 10]] = arr[i];
+      output[--Count[(arr[i] / pos) % 10]] = arr[i];
     }
 
     for (int i = 0; i < n; i++) {
-      arr[i] = b[i];
+      arr[i] = output[i];
     }
-    for (int i : arr) {
-      System.out.print(i + " ");
-    }
-    System.out.println();
   }
 
   static int getMax(int arr[]) {
-    int max = 0;
+    int max = arr[0];
     for (int i : arr) {
       if (i > max) max = i;
     }

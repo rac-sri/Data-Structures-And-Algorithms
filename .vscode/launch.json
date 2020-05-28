@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - RedixSort",
+            "request": "launch",
+            "mainClass": "CodeChef.UCS301.RedixSort",
+            "projectName": "HackerRank-Solutions_f7c8c4f6"
+        },
+        {
+            "type": "java",
             "name": "Debug (Launch) - Current File",
             "request": "launch",
             "mainClass": "${file}"

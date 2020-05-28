@@ -1,0 +1,36 @@
+A team of young programmers was playing with the contents of a two-dimensional matrix in a systematic manner and suddenly team members found an interesting thing. They observed that the contents are getting arranged in an increasing order when one moves either in a row (left to right) or in a column (top to bottom). Thus they decided to implement the systematic procedure which they followed while playing. They developed a document first and then share it with other teams too so that they can also verify the said observation.
+
+Here’s what they shared:
+
+Let A be a square n×n matrix of integers.
+Rows/columns with lower indices have to be processed first.
+The process has to be repeated alternatively on rows and columns.
+Overall the processing sequence to be followed is row0,column0,row1,column1,…rown−1,columnn−1.
+If we are at ith row, then we have to work with each column at a time from 0 to n−1 of this row. For any jth column, swap A[i][j] with the minimum of all the elements which are present in a column with index j and rows from indices i to n−1.
+If we are at jth column, then we have to work with each row at a time from 0 to n−1 of this column. For any ith row, swap A[i][j] with the minimum of all the elements which are present in a row with index i and columns with indices j to n−1.
+Let you, being a member of one of the senior teams, received the same. To do a bit of analysis, you decided to proceed with the implementation and also to keep a count on the total number of swaps.
+
+Input:
+Line 1 contains an integer N, the size of the square matrix.
+Line 2 contains N∗N integers separated by space. These are the contents of a square matrix in row-major order.
+Output:
+Line 1 is an integer giving the total number of swaps.
+Line 2 is space separated N∗N integers sequence. These are the final contents of a square matrix in row-major order.
+Sample Input:
+3
+19 28 39 21 2 11 22 12 37
+Sample Output:
+8
+2 11 19 12 22 37 21 28 39
+EXPLANATION:
+The array contents (listed in row-major order) get updated in the following manner after processing each row/column completely:
+
+19 28 39 21 2 11 22 12 37
+
+19 2 11 21 28 39 22 12 37
+
+2 19 11 21 28 39 12 22 37
+
+2 19 11 12 22 37 21 28 39
+
+2 11 19 12 22 37 21 28 39

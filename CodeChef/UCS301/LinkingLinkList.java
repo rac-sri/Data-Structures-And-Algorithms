@@ -50,13 +50,13 @@ public class LinkingLinkList {
 
     //printing
     for (int i : L2) {
-      System.out.print(i+ " ");
+      System.out.print(i + " ");
     }
 
     System.out.print("\n");
 
     for (int i : L3) {
-      System.out.print(i+ " ");
+      System.out.print(i + " ");
     }
 
     System.out.print("\n");
@@ -66,7 +66,7 @@ public class LinkingLinkList {
     System.out.print("\n");
 
     for (int i : L1) {
-      System.out.print(i+ " ");
+      System.out.print(i + " ");
     }
 
     System.out.print("\n");
