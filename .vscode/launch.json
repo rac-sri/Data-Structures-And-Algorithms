@@ -1,76 +1,14 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - RedixSort",
-            "request": "launch",
-            "mainClass": "CodeChef.UCS301.RedixSort",
-            "projectName": "HackerRank-Solutions_f7c8c4f6"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch) - Current File",
-            "request": "launch",
-            "mainClass": "${file}"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-BirthdayCakeCandles<threestar_be52c62e>",
-            "request": "launch",
-            "mainClass": "BirthdayCakeCandles",
-            "projectName": "threestar_be52c62e"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-DynamicArrayProblem<threestar_be52c62e>",
-            "request": "launch",
-            "mainClass": "DynamicArrayProblem",
-            "projectName": "threestar_be52c62e"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-GameOfTwoStacks<threestar_be52c62e>",
-            "request": "launch",
-            "mainClass": "GameOfTwoStacks",
-            "projectName": "threestar_be52c62e"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-GradingStudents<threestar_be52c62e>",
-            "request": "launch",
-            "mainClass": "GradingStudents",
-            "projectName": "threestar_be52c62e"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-HashCodeBooksAndLibaries<threestar_be52c62e>",
-            "request": "launch",
-            "mainClass": "HashCodeBooksAndLibaries",
-            "projectName": "threestar_be52c62e"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-Solution<threestar_be52c62e>",
-            "request": "launch",
-            "mainClass": "Solution",
-            "projectName": "threestar_be52c62e"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-TimeConversion<threestar_be52c62e>",
-            "request": "launch",
-            "mainClass": "TimeConversion",
-            "projectName": "threestar_be52c62e"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-Solution",
-            "request": "launch",
-            "mainClass": "threestar.Solution"
-        }
-    ]
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Debug (Launch) - Current File",
+      "request": "launch",
+      "mainClass": "${file}"
+    }
+  ]
 }
