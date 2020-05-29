@@ -1,0 +1,95 @@
+A team has to perform binary search on a three-dimensional sorted integer array. Instead on working directly at the content level, the team decided to start with the dimensions.
+
+Let A be an X×Y×Z array of integers and the value to be searched is num. The process starts by applying binary search only on the first dimension. Once the index, say midx, for the first dimension is identified, that implies the value num may exist somewhere in the set of elements represented by A[midx][0..Y−1][0..Z−1]. Now the process of binary search is repeated again for the second dimension to identify midy. After this, the range to be searched for gets reduced to a set of elements represented by A[midx][midy][0..Z−1]. Lastly, the simple binary search is applied on the third dimension to search for num.
+
+In case of a successful search, one has to output both the ranges obtained after fixing first and second dimension. Also the three indices corresponding to the searched element has to be given in the output.
+
+In case of an unsuccessful search, there can be three possibilities.
+
+num is out of all the ranges available for the first dimension. Output should be zero only.
+num is lying in one of the ranges available for the first dimension, but is out of all the ranges available for the second dimension. Output should have the range obtained after fixing first dimension and then zero for unsuccessful search.
+num is lying in one of the ranges available for first as well as second dimension. Output should have both the ranges obtained after fixing first and second dimension followed by a zero for unsuccessful search.
+Note: Binary search algorithm computes mid=(beg+end)/2 within the while loop only.
+
+Input:
+Line 1 contains four integers X, Y, Z, and N. X is the first, Y is the second, and Z is the third dimension of an array. N is the value to be searched.
+Line 2 contains X×Y×Z integers separated by space. These are the contents of a three-dimensional array in row-major order.
+Output:
+Successful search:
+
+Line 1 has two integers giving range obtained for the first dimension, i.e. minimum then maximum.
+Line 2 has two integers giving range obtained for the second dimension, i.e. minimum then maximum.
+Line 3 has three integers giving indices corresponding to the searched element N.
+Line 4 is an integer giving total number of times while loop of a binary search gets executed for all the three dimensions.
+Unsuccessful search:
+
+May have a single line as specified in possibility 1 of an unsuccessful search.
+May have two lines as specified in possibility 2 of an unsuccessful search.
+May have three lines as specified in possibility 3 of an unsuccessful search.
+In addition, the last line has an integer giving total number of times while loop of a binary search gets executed for all the three dimensions.
+Sample Input I:
+3 2 2 28
+2 11 12 19 21 22 28 37 39 69 75 92
+Sample Output I:
+21 37
+28 37
+1 1 0
+4
+EXPLANATION I:
+It’s a 3×2×2 array and we are searching for 28.
+
+Index positions and array content mapping is as follows: [0][0][0]:2,[0][0][1]:11,[0][1][0]:12,[0][1][1]:19,
+[1][0][0]:21,[1][0][1]:22,[1][1][0]:28,[1][1][1]:37,
+[2][0][0]:39,[2][0][1]:69,[2][1][0]:75,[2][1][1]:92.
+Based on the first dimension the loop executes only once and the range identified is 21 to 37. Similarly, for the second dimension the loop executes twice and the range identified is 28 to 37. Finally 28 is found at index positions [1][1][0].
+
+Sample Input II:
+3 2 2 80
+2 11 12 19 21 22 28 37 39 69 75 92
+Sample Output II:
+39 92
+75 92
+0
+6
+EXPLANATION II:
+It’s a 3×2×2 array and we are searching for 80.
+
+Index positions and array content mapping is as follows:
+
+[0][0][0]:2,[0][0][1]:11,[0][1][0]:12,[0][1][1]:19,
+[1][0][0]:21,[1][0][1]:22,[1][1][0]:28,[1][1][1]:37,
+[2][0][0]:39,[2][0][1]:69,[2][1][0]:75,[2][1][1]:92.
+Based on the first dimension the loop executes twice and the range identified is 39 to 92. Similarly, for the second dimension the loop executes twice and the range identified is 75 to 92. Based on the third dimension the loop executes twice and 80 is not found.
+
+Sample Input III:
+3 2 2 72
+2 11 12 19 21 22 28 37 39 69 75 92
+Sample Output III:
+39 92
+0
+4
+EXPLANATION III:
+It’s a 3×2×2 array and we are searching for 72.
+
+Index positions and array content mapping is as follows:
+
+[0][0][0]:2,[0][0][1]:11,[0][1][0]:12,[0][1][1]:19,
+[1][0][0]:21,[1][0][1]:22,[1][1][0]:28,[1][1][1]:37,
+[2][0][0]:39,[2][0][1]:69,[2][1][0]:75,[2][1][1]:92.
+Based on the first dimension the loop executes twice and the range identified is 39 to 92. Based on the second dimension the loop executes twice and none of the available ranges has 72.
+
+Sample Input IV:
+3 2 2 1
+2 11 12 19 21 22 28 37 39 69 75 92
+Sample Output IV:
+0
+2
+EXPLANATION IV:
+It’s a 3×2×2 array and we are searching for 1.
+
+Index positions and array content mapping is as follows:
+
+[0][0][0]:2,[0][0][1]:11,[0][1][0]:12,[0][1][1]:19,
+[1][0][0]:21,[1][0][1]:22,[1][1][0]:28,[1][1][1]:37,
+[2][0][0]:39,[2][0][1]:69,[2][1][0]:75,[2][1][1]:92.
+Based on the first dimension the loop executes twice and none of the available ranges has 1.
