@@ -20,11 +20,11 @@ public class PlayWith2DArray {
       column(arr, n, i);
     }
     System.out.println(count);
-    // for (int i = 0; i < n; i++) {
-    //   for (int j = 0; j < n; j++) {
-    //     System.out.print(arr[i][j] + " ");
-    //   }
-    // }
+    for (int i = 0; i < n; i++) {
+      for (int j = 0; j < n; j++) {
+        System.out.print(arr[i][j] + " ");
+      }
+    }
   }
 
   static void row(int arr[][], int n, int row) {
@@ -48,13 +48,13 @@ public class PlayWith2DArray {
         count++;
       }
     }
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < n; j++) {
-         System.out.print(arr[i][j] + " ");
-        }
-        System.out.println();
-      }
-      System.out.println("row done");
+    // for (int i = 0; i < n; i++) {
+    //     for (int j = 0; j < n; j++) {
+    //      System.out.print(arr[i][j] + " ");
+    //     }
+    //     System.out.println();
+    //   }
+    //   System.out.println("row done");
 
   }
 
@@ -77,11 +77,11 @@ public class PlayWith2DArray {
         count++;
       }
     }
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < n; j++) {
-         System.out.print(arr[i][j] + " ");
-        } System.out.println();
-      }
-      System.out.println("column done");
-  }
+  //   for (int i = 0; i < n; i++) {
+  //       for (int j = 0; j < n; j++) {
+  //        System.out.print(arr[i][j] + " ");
+  //       } System.out.println();
+  //     }
+  //     System.out.println("column done");
+  // }
 }
