@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "CodeLens (Launch) - GraphMatrix",
+      "request": "launch",
+      "mainClass": "DataStructures.GraphMatrix",
+      "projectName": "HackerRank-Solutions_f7c8c4f6"
+    },
+    {
+      "type": "java",
       "name": "CodeLens (Launch) - chatBot",
       "request": "launch",
       "mainClass": "chatBot",
