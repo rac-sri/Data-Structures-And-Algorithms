@@ -2,3 +2,4 @@ node_modules
 *.class
 */*.class
 */*/*.class
+.class
