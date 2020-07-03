@@ -10,11 +10,13 @@ class Node {
 
 class MaxLevel {
   int maxLevel;
+
+  MaxLevel() {}
 }
 
 class RightOrderView {
   Node root;
-  Max_level max = new Max_level();
+  MaxLevel max = new MaxLevel();
 
   void rightViewUtil(Node node, int level, MaxLevel maxLevel) {
     if (node == null) {
@@ -27,7 +29,7 @@ class RightOrderView {
     }
 
     rightViewUtil(node.right, level + 1, maxLevel);
-    rightViewUtil(node.left, level, maxLevel);
+    rightViewUtil(node.left, level + 1, maxLevel);
   }
 
   void rightView() {
