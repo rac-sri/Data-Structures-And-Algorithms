@@ -1,6 +1,7 @@
 import java.util.*;
 
 // The Dijkstra's Algorithm doesn't work in the case when the Graph has negative edge weight.
+// o(vlogv)
 
 public class Dijkstra {
   static final int V = 9;
@@ -55,7 +56,6 @@ public class Dijkstra {
   }
 
   public static void main(String[] args) {
-    /* Let us create the example graph discussed above */
     int graph[][] = new int[][] {
       { 0, 4, 0, 0, 0, 0, 0, 8, 0 },
       { 4, 0, 8, 0, 0, 0, 0, 11, 0 },
