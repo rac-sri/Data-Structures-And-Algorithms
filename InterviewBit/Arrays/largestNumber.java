@@ -4,7 +4,7 @@
 
 // Given [3, 30, 34, 5, 9], the largest formed number is 9534330.
 
-// TIMEOUT:
+// First solution:
 public class Solution {
 
   // DO NOT MODIFY THE ARGUMENTS WITH "final" PREFIX. IT IS READ ONLY
@@ -66,7 +66,7 @@ public class Solution {
   }
 }
 
-// ALL TEST CASES
+// From discussion, cleaner solution
 
 public class Solution {
 
