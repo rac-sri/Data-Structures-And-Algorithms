@@ -9,7 +9,7 @@ public class LongestCommonSubsequence {
         else {
             return max(lcs(X,Y,m,n-1), lcs(X,Y,m-1,n));
         }
-    }
+    }bo
     int max(int a, int b) 
     { 
       return (a > b)? a : b; 
